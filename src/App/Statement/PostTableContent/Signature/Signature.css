@@ -1,0 +1,10 @@
+.signature-img {
+  display: block;
+  height: 20px;
+}
+
+@media print {
+  .signature-img {
+    height: 20mm;
+  }
+}

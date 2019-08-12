@@ -1,0 +1,10 @@
+.date {
+  width: 98vw;
+  text-align: right;
+}
+
+@media print {
+  .date {
+    width: 210mm;
+  }
+}

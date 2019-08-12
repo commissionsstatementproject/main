@@ -1,0 +1,120 @@
+:root {
+  --highlight-color: #48c9b0;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
+
+.form-container {
+  background-color: white;
+  width: 530px;
+  height: 440px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 100px;
+}
+
+.form-heading {
+  font-size: 26px;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  align-self: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-input {
+  font-size: 14px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.text-input:focus {
+  outline: none;
+  border: 2px solid var(--highlight-color);
+}
+
+.file-input-container {
+  padding-left: 7px;
+}
+
+.file-input {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 80px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.file-input:focus {
+  outline: none;
+}
+
+.file-input:hover {
+  background-color: var(--highlight-color);
+}
+
+.submit-button-container {
+  padding-top: 20px;
+}
+
+.submit-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.submit-button:focus {
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: var(--highlight-color);
+}
+
+.hide {
+  display: none;
+}
+
+.extra-information {
+  font-size: 12px;
+  align-self: flex-start;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}

@@ -1,0 +1,15 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.logo-img {
+  height: 100px;
+}
+
+@media print {
+  .logo-container {
+    padding-bottom: 10mm;
+  }
+}

@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+@media print {
+  table {
+    width: 180mm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
