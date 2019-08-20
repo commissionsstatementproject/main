@@ -7,7 +7,7 @@ import getSheetFunctions from "../../functions/getSheetFunctions";
 import extractData from "../../functions/extractData";
 import { formatAndAlert } from "./statementHelper";
 
-function Statement({ csvString, salespersonName }) {
+function Statement({ csvString, salespersonName, signatureImageURL }) {
   const { getCell, getColumn } = getSheetFunctions(csvString);
   const data = extractData({ getCell, getColumn, salespersonName });
 
@@ -27,7 +27,7 @@ function Statement({ csvString, salespersonName }) {
       <div data-testid="statement">
         <PreTableContents data={data} />
         <PayEarningsTable data={data} />
-        <PostTableContents data={data} />
+        <PostTableContents data={data} signatureImageURL={signatureImageURL} />
       </div>
     );
   }

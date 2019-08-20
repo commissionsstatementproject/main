@@ -1,11 +1,29 @@
 import React from "react";
 import "./Signature.css";
 
-function Signature() {
+function Signature({ signatureImageURL }) {
+  const renderSignatureImage = signatureImageURL => {
+    if (!signatureImageURL) {
+      return (
+        <div>
+          <br /> <br /> <br /> <br />
+        </div>
+      );
+    } else {
+      return (
+        <img
+          src={signatureImageURL}
+          alt="signature"
+          className="signature-img"
+        />
+      );
+    }
+  };
+
   return (
     <div className="text open-sans" data-testid="signature">
       Thanks again.
-      <img src="sig.jpg" alt="signature" className="signature-img" />
+      {renderSignatureImage(signatureImageURL)}
       Head of Sales/Demand
     </div>
   );

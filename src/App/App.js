@@ -4,6 +4,7 @@ import Statement from "./Statement/Statement";
 
 function App() {
   const [csvString, setCsvString] = React.useState("");
+  const [signatureImageURL, setSignatureImageURL] = React.useState(null);
   const [salespersonName, setSalespersonName] = React.useState("");
 
   if (!csvString) {
@@ -13,12 +14,19 @@ function App() {
         handleSalespersonNameChange={event =>
           setSalespersonName(event.target.value)
         }
+        handleSignatureImageURLChange={event =>
+          setSignatureImageURL(URL.createObjectURL(event.target.files[0]))
+        }
         setCsvString={setCsvString}
       />
     );
   } else {
     return (
-      <Statement csvString={csvString} salespersonName={salespersonName} />
+      <Statement
+        csvString={csvString}
+        salespersonName={salespersonName}
+        signatureImageURL={signatureImageURL}
+      />
     );
   }
 }

@@ -3,11 +3,11 @@ import Signature from "./Signature/Signature";
 import Asterisks from "./Asterisks/Asterisks";
 import PostTableText from "./PostTableText/PostTableText";
 
-function PostTableContent({ data }) {
+function PostTableContent({ data, signatureImageURL }) {
   return (
     <React.Fragment>
       <PostTableText data={data} />
-      <Signature />
+      <Signature signatureImageURL={signatureImageURL} />
       <Asterisks />
     </React.Fragment>
   );

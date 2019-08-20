@@ -7,8 +7,14 @@ import {
 import "./Home.css";
 
 function Home(props) {
-  const { setCsvString, salespersonName, handleSalespersonNameChange } = props;
+  const {
+    setCsvString,
+    salespersonName,
+    handleSalespersonNameChange,
+    handleSignatureImageURLChange
+  } = props;
   const [file, setFile] = React.useState(null);
+  const [signatureImageName, setSignatureImageName] = React.useState(null);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -63,6 +69,30 @@ function Home(props) {
           </div>
           <div className="small">
             Selected file: {!file ? "none" : file.name}
+          </div>
+        </div>
+
+        <div className="form-section open-sans">
+          <div>
+            <span>Signature Image (optional):</span>
+            <span className="file-input-container">
+              <label className="file-input">
+                Browse
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={event => {
+                    handleSignatureImageURLChange(event);
+                    setSignatureImageName(event.target.files[0].name);
+                  }}
+                  className="hide"
+                />
+              </label>
+            </span>
+          </div>
+          <div className="small">
+            Selected signature image:{" "}
+            {!signatureImageName ? "none" : signatureImageName}
           </div>
         </div>
 
